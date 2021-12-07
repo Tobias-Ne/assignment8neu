@@ -8,3 +8,4 @@ public interface Plugin {
     void setApplication(InputProvider app);
 
 }
+
