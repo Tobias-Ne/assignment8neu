@@ -51,7 +51,21 @@ public class OwnApplication extends Stage implements InputProvider {
                     plugin.buttonClicked();
                 }
             });
-
+        if (plugin.getApplicationTitle() == "File Uploader") {
+            Button button2 = new Button();
+            button2.setText("search files");
+            contentPane.setCenter(button2);
+            button2.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("");
+                    alert.setHeaderText(null);
+                    alert.setContentText("choose file");
+                    alert.show();
+                }
+            });
+        }
         this.setScene(new Scene(contentPane));
         this.setTitle(plugin.getApplicationTitle());
     }

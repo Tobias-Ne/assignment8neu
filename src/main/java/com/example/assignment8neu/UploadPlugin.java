@@ -25,7 +25,7 @@ public class UploadPlugin implements Plugin { // TODO: Problem: 2 buttons necess
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("");
         alert.setHeaderText(null);
-        alert.setContentText("choose file");
+        alert.setContentText("file uploaded");
         alert.show();
     }
 
