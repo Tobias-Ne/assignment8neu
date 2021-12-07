@@ -47,6 +47,7 @@ public class OwnApplication extends Stage implements InputProvider {
          //   button.addEventHandler(/* TODO */);
 
         this.setScene(new Scene(contentPane));
+        this.setTitle(plugin.getApplicationTitle());
     }
 
     public String getInput() { return textfield.getText(); }
