@@ -16,6 +16,8 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();*/ // TODO: I dont think this is necessary (was from template), dont know what fxmlLoader does though
         new OwnApplication(new CalcPlugin()).show(); // WHUT
+        new OwnApplication(new PingPlugin()).show();
+        new OwnApplication(new UploadPlugin()).show();
     }
 
     public static void main(String[] args) {
