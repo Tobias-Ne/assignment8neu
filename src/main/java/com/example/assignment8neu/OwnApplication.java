@@ -1,6 +1,8 @@
 package com.example.assignment8neu;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.geometry.Insets;
@@ -18,7 +20,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-// TODO: Extend application or Stage...?!?
 public class OwnApplication extends Stage implements InputProvider {
     private Plugin plugin;
     private TextField textfield;
@@ -43,8 +44,13 @@ public class OwnApplication extends Stage implements InputProvider {
             textfield.setText(plugin.getInitialText());
         textfield.setPrefSize(200,20);
         contentPane.setLeft(textfield);
-        //if (plugin != null) // TODO
-         //   button.addEventHandler(/* TODO */);
+        if (plugin != null)
+            button.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    plugin.buttonClicked();
+                }
+            });
 
         this.setScene(new Scene(contentPane));
         this.setTitle(plugin.getApplicationTitle());

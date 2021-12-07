@@ -1,6 +1,10 @@
 package com.example.assignment8neu;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class UploadPlugin implements Plugin { // TODO: Problem: 2 buttons necessary
     private InputProvider application;
@@ -10,19 +14,19 @@ public class UploadPlugin implements Plugin { // TODO: Problem: 2 buttons necess
     }
 
     public String getButtonText() {
-        return "ping";
+        return "upload";
     }
 
     public String getInitialText() {
-        return "127.0.0.1";
+        return "";
     }
 
     public void buttonClicked() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("");
         alert.setHeaderText(null);
-        alert.setContentText("File " + application.getInput() + " uploaded");
-
+        alert.setContentText("Datei auswählen");
+        alert.show();
     }
 
     public String getApplicationTitle() {

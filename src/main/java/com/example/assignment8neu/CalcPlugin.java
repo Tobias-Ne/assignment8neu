@@ -22,7 +22,7 @@ public class CalcPlugin implements Plugin {
         alert.setTitle("");
         alert.setHeaderText(null);
         alert.setContentText("The result of " + application.getInput() + " is 11");
-
+        alert.show();
     }
 
     public String getApplicationTitle() {

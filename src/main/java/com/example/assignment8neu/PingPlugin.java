@@ -22,6 +22,7 @@ public class PingPlugin implements Plugin {
         alert.setTitle("");
         alert.setHeaderText(null);
         alert.setContentText("The ping to " + application.getInput() + " is 0ms");
+        alert.show();
 
     }
 
