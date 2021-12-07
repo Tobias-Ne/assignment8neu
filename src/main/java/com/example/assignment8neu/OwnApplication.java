@@ -19,7 +19,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 // TODO: Extend application or Stage...?!?
-public class OwnApplication extends Application implements InputProvider {
+public class OwnApplication extends Stage implements InputProvider {
     private Plugin plugin;
     private TextField textfield;
 
