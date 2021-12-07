@@ -31,7 +31,7 @@ public class OwnApplication extends Stage implements InputProvider {
 
     public void init() {
         BorderPane contentPane = new BorderPane();
-        contentPane.setBorder(); // TODO
+        //contentPane.setBorder(); // TODO
         Button button = new Button();
         if (plugin != null)
             button.setText(plugin.getButtonText());
@@ -43,8 +43,8 @@ public class OwnApplication extends Stage implements InputProvider {
             textfield.setText(plugin.getInitialText());
         textfield.setPrefSize(200,20);
         contentPane.setLeft(textfield);
-        if (plugin != null)
-            button.addEventHandler(/* TODO */);
+        //if (plugin != null) // TODO
+         //   button.addEventHandler(/* TODO */);
 
         this.setScene(new Scene(contentPane));
     }
